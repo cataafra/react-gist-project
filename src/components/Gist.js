@@ -1,35 +1,24 @@
 import "./Gist.css";
 
 const Gist = (props) => {
-  const gist = {
-    id: "test",
-    description: "test",
-    comments: "test",
-    files: [
-      {
-        filename: "test",
-        language: "py",
-        raw_url: "/#/",
-      },
-    ],
-  };
+  const files = Object.entries(props.files);
 
   return (
-    <li className="gist" key={props.id}>
+    <div className="gist">
       <h3 className="gist__desc">{props.description}</h3>
       <div>Files: </div>
-      <ul className="gist__files">
-        {props.files.map((e) => {
+      <div className="gist__files">
+        {files.map(([filename, fileInfo]) => {
           return (
-            <li className="gist__files__elem">
-              <div>{e.filename}</div>
-              <a href={e.raw_url}>Link</a>
-              <div>{e.language}</div>
-            </li>
+            <div className="gist__files__elem">
+              <div>{filename}</div>
+              <a href={fileInfo.raw_url}>See code</a>
+              <div>{fileInfo.language}</div>
+            </div>
           );
         })}
-      </ul>
-    </li>
+      </div>
+    </div>
   );
 };
 
