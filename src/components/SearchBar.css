@@ -1,0 +1,38 @@
+.SearchBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  font-size: large;
+  font-weight: 600;
+  border: 1px solid lightgrey;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.search > * {
+  font-size: large;
+  border: none;
+  padding: 1em;
+}
+
+.search__button {
+  color: lightgray;
+  background-color: white;
+  cursor: pointer;
+}
+
+.search__at-icon {
+  padding-right: 0;
+  margin-bottom: 1px;
+}
+
+.search__input {
+  outline: none;
+  padding-left: 0;
+}
