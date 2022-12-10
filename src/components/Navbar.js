@@ -1,7 +1,7 @@
-import "./Navbar.css";
+import "./Navbar.scss";
 
 const Navbar = () => {
-  return <div className="navbar">Github GIST Search</div>;
+  return <h1 className="navbar">Github GIST Search</h1>;
 };
 
 export default Navbar;

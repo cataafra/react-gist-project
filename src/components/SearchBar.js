@@ -1,29 +1,38 @@
-import "./SearchBar.css";
+import "./SearchBar.scss";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const SearchBar = () => {
   const [inputs, setInputs] = useState({});
 
   const handleChange = (event) => {
-    const name = event.target.name;
     const value = event.target.value;
-    setInputs((values) => ({ ...values, [name]: value }));
+    setInputs(value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(inputs);
+    console.log(inputs);
   };
 
-  const [searchInput, setSearchInput] = useState("");
-
   return (
-    <>
-      <div className="search-header">Search for a user on GitHub</div>
+    <div className="SearchBar">
+      <h2 className="search-header">Search for a user on GitHub</h2>
       <form onSubmit={handleSubmit} className="search">
-        <input className="search__input">type==""</input>
+        <div className="search__at-icon">@</div>
+        <input
+          className="search__input"
+          type="text"
+          id="search"
+          placeholder="username"
+          onChange={handleChange}
+        />
+        <button className="search__button" onClick={handleSubmit}>
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
+        </button>
       </form>
-    </>
+    </div>
   );
 };
 
