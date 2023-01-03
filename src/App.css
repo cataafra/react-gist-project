@@ -38,6 +38,8 @@
 }
 
 .main-container {
-  display: block;
+  display: flex;
   padding: 0;
+  flex-direction: column;
+  justify-content: center;
 }

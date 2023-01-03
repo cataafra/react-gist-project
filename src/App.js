@@ -1,35 +1,17 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import SearchBar from "./components/SearchBar";
-// import Gist from "./components/Gist";
 import GistList from "./components/GistList";
-import Popup from "./components/Popup";
+import { useState } from "react";
 
 function App() {
-  // const gist = {
-  //   id: "test",
-  //   description: "test",
-  //   comments: "test",
-  //   files: [
-  //     {
-  //       filename: "test",
-  //       language: "py",
-  //       raw_url: "/#/",
-  //     },
-  //     {
-  //       filename: "test2",
-  //       language: "js",
-  //       raw_url: "/#/",
-  //     },
-  //   ],
-  // };
+  const [username, setUsername] = useState(null); // username prop to be used by the children SearchBar snd GistList
 
   return (
     <div className="main-container">
       <Navbar></Navbar>
-      <SearchBar></SearchBar>
-      <GistList username="vsouza"></GistList>
-      <Popup message="test test"></Popup>
+      <SearchBar setUsername={setUsername}></SearchBar>
+      {username !== null && <GistList username={username}></GistList>}
     </div>
   );
 }

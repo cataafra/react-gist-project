@@ -1,0 +1,42 @@
+.gist {
+  width: 35%;
+  padding: 2rem;
+  border: 1px solid lightgray;
+  border-radius: 1rem;
+}
+
+.gist__desc {
+  max-height: 5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gist__labels {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  gap: 1rem;
+}
+
+.label {
+  font-size: x-small;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 10%;
+}
+
+.gist__files {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.file {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+  align-items: baseline;
+  text-decoration: none;
+  color: black;
+}

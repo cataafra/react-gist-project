@@ -3,21 +3,21 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
-const SearchBar = () => {
-  const [inputs, setInputs] = useState({});
+const SearchBar = (props) => {
+  const [inputValue, setInputValue] = useState("");
 
   const handleChange = (event) => {
     const value = event.target.value;
-    setInputs(value);
+    setInputValue(value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(inputs);
+    props.setUsername(inputValue);
   };
 
   return (
-    <div className="SearchBar">
+    <div className="search-bar">
       <h2 className="search-header">Search for a user on GitHub</h2>
       <form onSubmit={handleSubmit} className="search">
         <div className="search__at-icon">@</div>
