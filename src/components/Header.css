@@ -1,6 +1,10 @@
 .header {
   width: 100%;
-  margin: 0;
   padding: 1.5rem;
   background-color: #7ac698;
+}
+
+.header__text {
+  margin: 0;
+  font-size: 2rem;
 }

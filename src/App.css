@@ -43,4 +43,6 @@
   padding: 0;
   flex-direction: column;
   justify-content: center;
+  min-height: 100vh;
+  max-width: 100%;
 }

@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
 import GistList from "./components/GistList";
+import Footer from "./components/Footer";
 import { useState } from "react";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Header></Header>
       <SearchBar setUsername={setUsername}></SearchBar>
       {username !== null && <GistList username={username}></GistList>}
+      <Footer></Footer>
     </div>
   );
 }

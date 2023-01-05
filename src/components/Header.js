@@ -1,7 +1,11 @@
 import "./Header.css";
 
 const Header = () => {
-  return <h1 className="header">Github Gist Search</h1>;
+  return (
+    <section className="header">
+      <h1 className="header__text">Github Gist Search</h1>
+    </section>
+  );
 };
 
 export default Header;
