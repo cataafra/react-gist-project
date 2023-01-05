@@ -3,9 +3,14 @@
   padding: 2rem;
   border: 1px solid lightgray;
   border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .gist__desc {
+  display: flex;
   max-height: 5rem;
   overflow: hidden;
   text-overflow: ellipsis;

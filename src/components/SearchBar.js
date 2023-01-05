@@ -18,7 +18,7 @@ const SearchBar = (props) => {
 
   return (
     <div className="search-bar">
-      <h2 className="search-header">Search for a user on GitHub</h2>
+      <h2 className="search-header">Search for a Github user</h2>
       <form onSubmit={handleSubmit} className="search">
         <div className="search__at-icon">@</div>
         <input

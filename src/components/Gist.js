@@ -22,7 +22,7 @@ const Gist = (props) => {
       <div className="gist__files">
         {files.map(([filename, fileInfo]) => {
           return (
-            <React.Fragment>
+            <React.Fragment key={filename}>
               <a href={fileInfo.raw_url} className="file">
                 {fileInfo.filename}
                 <FontAwesomeIcon

@@ -38,6 +38,7 @@
 }
 
 .main-container {
+  font-family: "Roboto";
   display: flex;
   padding: 0;
   flex-direction: column;
